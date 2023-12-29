@@ -1,0 +1,304 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "postgresql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model player {
+  id        String      @id @default(uuid())
+  username  String      @unique
+  password  String
+  character character[]
+}
+
+model character {
+  firstName      String
+  lastName       String
+  appearance     String
+  sex            sexChoice @default(MALE)
+  age            Int       @default(18)
+  lvl            Int       @default(1)
+  speciesId      String
+  classId        String
+  playerId       String
+  titlesId       String
+  modifiersId    String[]
+  skillId        String[]
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  existanceValue Int
+  stats          stats[]
+  statIds        String[]
+  species        species   @relation(fields: [speciesId], references: [id])
+  class          classes   @relation(fields: [classId], references: [id])
+  player         player    @relation(fields: [playerId], references: [id])
+  titles         titles    @relation(fields: [titlesId], references: [id])
+  modifiers      modifiers @relation(fields: [modifiersId], references: [id])
+  skills         skills    @relation(fields: [skillId], references: [id])
+
+  @@id([firstName, lastName])
+  @@unique([firstName])
+  @@index([classId])
+  @@index([speciesId])
+  @@index([playerId])
+  @@index([modifiersId])
+  @@index([titlesId])
+  @@index([skillId])
+}
+
+model stats {
+  character   character  @relation(fields: [characterId], references: [firstName])
+  characterId String     @unique
+  categories  Categories @unique
+  values      Int
+}
+
+model classes {
+  id          String      @id @unique
+  name        classList
+  description String
+  type        classType
+  lvlReq      Int?
+  speciesId   String
+  speciesReq  species     @relation(fields: [speciesId], references: [id])
+  character   character[]
+
+  @@index([speciesId])
+}
+
+model titles {
+  id                 String      @id @unique
+  name               String
+  type               titleTypes  @default(NORMAL)
+  description        String
+  effect             String?
+  condition          String
+  acquistionSkills   skills      @relation(fields: [acquistionSkillIds], references: [id])
+  acquistionSkillIds String[]
+  character          character[]
+
+  @@index([acquistionSkillIds])
+}
+
+model modifiers {
+  id                          String      @id @unique
+  name                        String
+  type                        String
+  description                 String
+  random                      Boolean     @default(false)
+  chance                      Float?
+  existenceValueModifier      Decimal?
+  magiculeValueModifier       Decimal?
+  holyPowerValueModifier      Decimal?
+  magicalPowerValueModifier   Decimal?
+  materialEnergyValueModifier Decimal?
+  soulEnergyValueModifier     Decimal?
+  auraValueModifer            Decimal?
+  requiredSpeciesId           String[]
+  requiredSpecies             species?    @relation(fields: [requiredSpeciesId], references: [id])
+  character                   character[]
+
+  @@index([requiredSpeciesId])
+}
+
+model species {
+  id                  String        @id
+  name                String        @unique
+  family              speciesFamily
+  type                speciesType
+  stage               speciesStage
+  existenceValue      BigInt
+  magiculeValue       BigInt
+  holyPowerValue      BigInt
+  magicalPowerValue   BigInt
+  materialEnergyValue BigInt
+  soulEnergyValue     BigInt
+  auraValue           BigInt
+  lvlUpId             String
+  previousEvolution   String?
+  nextEvolution       String?
+  lvlUpRules          lvlUps        @relation(fields: [lvlUpId], references: [id])
+  character           character[]
+  classes             classes[]
+  modifiers           modifiers[]
+
+  @@index([lvlUpId])
+}
+
+model lvlUps {
+  id                     String              @id
+  species                species[]
+  stage                  speciesStage
+  magiculeIncrease       Int
+  holyPowerIncrease      Int
+  magicalPowerIncrease   Int
+  materialEnergyIncrease Int
+  soulEnergyIncrease     Int
+  auraIncrease           Int
+  lvlUpRequirements      lvlUpRequirements[]
+}
+
+model lvlUpRequirements {
+  lvlUpId       lvlUps @relation(fields: [requirementId], references: [id])
+  requirementId String @id @unique
+  lvl           Int    @default(1)
+  expReq        Int    @default(0)
+}
+
+model skills {
+  id                String      @id
+  name              String      @unique
+  type              skillType
+  rank              skillRank
+  previousEvolution String?
+  nextEvolution     String?
+  manaCost          Int?
+  staminaCost       Int?
+  auraCost          Int?
+  damageType        String
+  statusType        String?
+  baseDamage        Int         @default(0)
+  character         character[]
+  titles            titles[]
+}
+
+enum classList {
+  Warlock
+  Wizard
+  Cleric
+  Barbarian
+  Rogue
+  Sorcerer
+  Fighter
+  Warrior
+  Hunter
+  Monk
+}
+
+enum classType {
+  MAGIC
+  AURA
+  PHYSICAL
+}
+
+enum titleTypes {
+  NORMAL
+  HUNTING
+  RULER
+  VIRTUE
+}
+
+enum modifierTypes {
+  DEBUFF
+  BUFF
+  NEUTRAL
+}
+
+enum speciesFamily {
+  ELF
+  HUMAN
+  DWARF
+  DROW
+  VAMPIRE
+  DEMON
+  DEVIL
+  OGRE
+  ORC
+  TARARACT
+}
+
+enum damageType {
+  DESTRUCTION
+  CUTTING
+  PIERCING
+  IMPACT
+  SHOCK
+  HERESY
+  FIRE
+  WATER
+  ICE
+  WIND
+  EARTH
+  LIGHTNING
+  LIGHT
+  DARK
+  POISON
+  SPACE
+  HEAVY
+  CURSE
+}
+
+enum statusType {
+  RENDSOUL
+  HYPNOTIZED
+  BRAINWASHED
+  CHARMED
+  MADNESS
+  DISCOMFORT
+  PHANTOMPAIN
+  FEAR
+  STUPEFACTION
+  PARALYSIS
+  PETRIFICATION
+  SLEEP
+  ACID
+  ROT
+}
+
+enum speciesType {
+  MONSTER
+  HUMAN
+  DEMIHUMAN
+}
+
+enum speciesStage {
+  FIRST
+  SECOND
+  THIRD
+  FOURTH
+  FINAL
+}
+
+enum sexChoice {
+  MALE
+  FEMALE
+}
+
+enum skillType {
+  ABILITY
+  ATTACK
+  ENHANCEMENT
+  ACTIVE
+  LEADERSHIP
+  PERCEPTION
+  MAGIC
+  RESISTANCE
+  PASSIVE
+  SIN
+  VIRTUE
+  MISC
+}
+
+enum skillRank {
+  COMMON
+  UNCOMMON
+  HARMONIC
+  UNIQUE
+  CORRUPTED
+  ULTIMATE
+  ADMINISTRATOR
+}
+
+enum Categories {
+  magiculeMaximum
+  magiculeCurrent
+  holyPower
+  magicalPower
+  materialEnergy
+  soulEnergy
+  auraPoints
+}

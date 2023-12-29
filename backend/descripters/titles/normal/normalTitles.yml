@@ -1,0 +1,242 @@
+foulFeeder:
+  id: titles.normal.foulFeeder # titles.type.name
+  name: Foul Feeder
+  type: NORMAL
+  description: "A title awarded to those who will eat even poison."
+  effect: 'Digestive system becomes stronger.'
+  condition: 'Consume a large amount of poison or similar substances within a certain period of time.'
+  acquisitionSkillIds: [skills.common.resistance.poisonResistance, skills.common.resistance.rotResistance]
+
+kinEater:
+  id: titles.normal.kinEater # titles.type.name
+  name: Kin Eater
+  type: NORMAL
+  description: "A title awarded to those who eat a relative."
+  effect: 'None'
+  condition: 'Consume a blood relative.'
+  acquisitionSkillIds: [skills.uncommon.misc.taboo, skills.uncommon.magic.heretic]
+
+assassin:
+  id: titles.normal.assassin # titles.type.name
+  name: Assassin
+  type: NORMAL
+  description: "A title awarded to those accomplish repeated assassinations."
+  effect: 'Damage bonus to surprise strikes.'
+  condition: 'Succeed in a certain amount of assassinations by way of surprise attack.'
+  acquisitionSkillIds: [skills.common.passive.stealth, skills.uncommon.magic.shadow]
+
+poisonTechniqueUser:
+  id: titles.normal.poisonTechniqueUser # titles.type.name
+  name: Poison Technique User
+  type: NORMAL
+  description: "A title awarded to those who use poison."
+  effect: 'Strengthens poison attribute.'
+  condition: 'Use a certain quantity of poison.'
+  acquisitionSkillIds: [skills.common.active.poisonSynthesis, skills.common.magic.poison]
+
+threadUser:
+  id: titles.normal.threadUser # titles.type.name
+  name: Thread User
+  type: NORMAL
+  description: "A title awarded to those who use thread as a weapon."
+  effect: 'Increases power of thread-based attacks.'
+  condition: 'Use threads to attack a certain number of times.'
+  acquisitionSkillIds: [skills.common.active.threadControl, skills.common.active.cuttingThread]
+
+merciless:
+  id: titles.normal.merciless # titles.type.name
+  name: Merciless
+  type: NORMAL
+  description: "A title awarded to merciless individuals."
+  effect: 'Negates any feelings of guilt.'
+  condition: 'Merciless behaviour.'
+  acquisitionSkillIds: [skills.uncommon.magic.heretic, skills.uncommon.resistance.hereseyResistance]
+
+commander:
+  id: titles.normal.commander # titles.type.name
+  name: Commander
+  type: NORMAL
+  description: "A title awarded to leaders."
+  effect: 'Raises the status values of some of followers.'
+  condition: 'Lead others a certain amount of times'
+  acquisitionSkillIds: [skills.common.leadership.leadership, skills.common.leadership.cooperation]
+
+fearBringer:
+  id: titles.normal.fearBringer # titles.type.name
+  name: Fearbringer
+  type: NORMAL
+  description: "A title awarded to those who personify fear."
+  effect: 'Inflicts the heresy attribute effect "Fear" on anyone who sees the holder.'
+  condition: 'Induce a certain amount of proficiency in Fear Resistance in others.'
+  acquisitionSkillIds: [skills.uncommon.passive.intimidation, skills.uncommon.attack.hereticAttack]
+
+dragon:
+  id: titles.normal.dragon # titles.type.name
+  name: Dragon
+  type: NORMAL
+  description: "A title awarded to those who are a dragon."
+  effect: 'None.'
+  condition: 'Become a dragon '
+  acquisitionSkillIds: []
+
+vampire:
+  id: titles.normal.vampire # titles.type.name
+  name: Vampire
+  type: NORMAL
+  description: "A title awarded to one who has become a vampire."
+  effect: 'Adds Vampire to the holder's species.'
+  condition: 'Acquires skill Vampire.'
+  acquisitionSkillIds: [skills.uncommon.ability.autoHpRecovery, skills.common.passive.nightVision]
+
+progenitor:
+  id: titles.normal.progenitor # titles.type.name
+  name: Progenitor
+  type: NORMAL
+  description: "A title awarded to a progenitor of vampires."
+  effect: 'Cancels out the negative effects of being a vampire.'
+  condition: 'Be born a Vampire.'
+  acquisitionSkillIds: [skills.uncommon.passive.undyingBody, skills.common.enhancement.fiveSensesEnhancement]
+
+originator:
+  id: titles.normal.originator # titles.type.name
+  name: Originator
+  type: NORMAL
+  description: "A title awarded to vampires who have turned another into a vampire."
+  effect: 'None.'
+  condition: 'Turn someone into a vampire '
+  acquisitionSkillIds: [skills.common.leadership.kinControl, skills.common.resistance.statusConditionResistance]
+
+rescurer:
+  id: titles.normal.rescurer # titles.type.name
+  name: Rescurer
+  type: NORMAL
+  description: "A title awarded to those who save others."
+  effect: 'Strengthens effectiveness of healing.'
+  condition: 'Acquire a certain number of purification points.'
+  acquisitionSkillIds: [skills.uncommon.magic.healing, skills.uncommon.magic.light]
+
+medicineAlchemist:
+  id: titles.normal.medicineAlchemist # titles.type.name
+  name: Medicine Alchemist
+  type: NORMAL
+  description: "A title awarded to those who use medicine."
+  effect: 'Strengthens effectiveness of medicine.'
+  condition: 'Use a certain quantity of medicine.'
+  acquisitionSkillIds: [skills.uncommon.active.medicineSynthesis, skills.uncommon.magic.healing]
+
+saint:
+  id: titles.normal.saint # titles.type.name
+  name: Saint
+  type: NORMAL
+  description: "A title awarded to those who save many others."
+  effect: 'Drastically strengthens effectiveness of healing.'
+  condition: 'Acquire a certain number of purification points.'
+  acquisitionSkillIds: [skills.uncommon.magic.miracle, skills.uncommon.magic.holyLight]
+
+saviour:
+  id: titles.normal.saviour # titles.type.name
+  name: Saviour
+  type: NORMAL
+  description: "A title awarded to those who save countless others."
+  effect: 'Drastically strengthens capacity for Light attribute.'
+  condition: 'Acquire a certain number of purification points. '
+  acquisitionSkillIds: [skills.unique.ruler.charity, skills.unique.misc.hero]
+
+guardian:
+  id: titles.normal.guardian # titles.type.name
+  name: Guardian
+  type: NORMAL
+  description: "A title awarded to those who protect others."
+  effect: 'Greatly increases defense and resistance abilities.'
+  condition: 'Protect a certain number of people.'
+  acquisitionSkillIds: [skills.uncommon.active.ironDefence, skills.common.passive.shieldsmenship]
+
+puppetUser:
+  id: titles.normal.puppetUser # titles.type.name
+  name: Puppet User
+  type: NORMAL
+  description: "A title awarded to those who use puppets as a way to attack."
+  effect: 'None.'
+  condition: 'Use puppets to attack a certain number of times.'
+  acquisitionSkillIds: [skills.common.active.telekinesis]
+
+ancientDivineBeast:
+  id: titles.normal.ancientDivineBeast # titles.type.name
+  name: Ancient Divine Beast
+  type: NORMAL
+  description: "A title awarded to Divine Beasts who have lived a long time"
+  effect: 'Increases power of thread-based attacks.'
+  condition: 'Exist for over 1000 years.'
+  acquisitionSkillIds: []
+
+demonLord:
+  id: titles.normal.demonLord # titles.type.name
+  name: Demon Lord
+  type: NORMAL
+  description: "A title awarded to the one who is best fitted to be the demon lord."
+  effect: 'Increases power of thread-based attacks.'
+  condition: 'Be chosen as the next Demon Lord.'
+  acquisitionSkillIds: [skills.unique.misc.demonLord, skills.unique.magic.black]
+
+hero:
+  id: titles.normal.hero # titles.type.name
+  name: Hero
+  type: NORMAL
+  description: "A title awarded to the one who is best fitted to be the hero."
+  effect: 'Hidden effect: Gives the hero the power to defeat the Demon Lord when facing them.'
+  condition: 'Be chosen as the next Hero.'
+  acquisitionSkillIds: [skills.unique.misc.hero, skills.uncommon.magic.holyLight]
+
+champion:
+  id: titles.normal.champion # titles.type.name
+  name: Champion
+  type: NORMAL
+  description: "A title awarded to those worthy of being champions."
+  effect: 'Inflicts the Heresy attribute effect "Fear" on anyone who sees the holder.'
+  condition: 'Be recognised as a champion by an administrator.'
+  acquisitionSkillIds: [skills.uncommon.enhancement.descructionEnhancement, skills.uncommon.resistance.statusConditionResistance]
+
+allyKiller:
+  id: titles.normal.threadUser # titles.type.name
+  name: Thread User
+  type: NORMAL
+  description: "A title awarded to those who have killed their ally."
+  effect: 'None.'
+  condition: 'Kill someone who considers you an ally.'
+  acquisitionSkillIds: [skills.uncommon.attack.hereticAttack, skills.common.misc.taboo]
+
+masterKiller:
+  id: titles.normal.threadUser # titles.type.name
+  name: Thread User
+  type: NORMAL
+  description: "A title awarded to those who have killed their master."
+  effect: 'None.'
+  condition: 'Kill your master.'
+  acquisitionSkillIds: []
+
+swordGod:
+  id: titles.normal.threadUser # titles.type.name
+  name: Thread User
+  type: NORMAL
+  description: "A title awarded to the one who is the best at using swords."
+  effect: 'None.' 
+  condition: 'Be the best sword wielder alive. Can also be obtained by killing the Sword God.'
+  acquisitionSkillIds: [skills.unique.misc.swordHero]
+
+countryDestroyer:
+  id: titles.normal.threadUser # titles.type.name
+  name: Thread User
+  type: NORMAL
+  description: "A title awarded to those who have destroyed a country."
+  effect: 'None.'
+  condition: 'Destroy a country.'
+  acquisitionSkillIds: [skills.common.active.threadControl, skills.common.active.cuttingThread]
+
+subjugatedByTheHero:
+  id: titles.normal.threadUser # titles.type.name
+  name: Thread User
+  type: NORMAL
+  description: "A title awarded to those who have subjugated by the Hero."
+  effect: 'None.'
+  condition: 'Be reduced to 1 HP by the Hero.'
+  acquisitionSkillIds: [skills.unique.misc.demonLord, skills.uncommon.misc.taboo]

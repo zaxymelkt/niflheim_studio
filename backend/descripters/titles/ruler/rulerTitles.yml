@@ -1,0 +1,134 @@
+rulerOfPride:
+  id: titles.ruler.pride
+  name: Ruler of Pride
+  type: RULER
+  description: "A title granted to one who has conquered Pride."
+  effect: 'Increases MP, Magic and resistance stats. +Correction to mental skill proficiencies. Grants ruling class privileges.'
+  condition: 'Acquisition of pride.'
+  acquisitionSkillIds: [skills.ultimate.magic.abyssMagic, skills.unique.magic.hades]
+
+rulerOfSloth:
+  id: titles.ruler.sloth
+  name: Ruler of Sloth
+  type: RULER
+  description: "A title granted to one who has conquered Sloth."
+  effect: 'Increases HP and SP stats. +Correction to Perception-type skill proficiencies. Grants ruling class privileges.'
+  condition: 'Acquisition of Sloth.'
+  acquisitionSkillIds: [skills.ultimate.resistance.exhaustionNullification, skills.ultimate.active.corruption]
+
+rulerOfGluttony:
+  id: titles.ruler.gluttony
+  name: Ruler of Gluttony
+  type: RULER
+  description: "A title granted to one who has conquered Gluttony."
+  effect: 'Each ability of HP, MP and SP rise. ＋Correction whenever status strengthening-type skill proficiency gained. Grants ruling class privileges.'
+  condition: 'Acquisition of Gluttony.'
+  acquisitionSkillIds: []
+
+rulerOfWrath:
+  id: titles.ruler.wrath
+  name: Ruler of Wrath
+  type: RULER
+  description: "A title granted to one who has conquered Wrath."
+  effect: 'Each ability of Strength and speed rise. +Correction to Enhancement skill Proficiencies. Grants ruling class privileges.'
+  condition: 'Acquisition of Wrath.'
+  acquisitionSkillIds: []
+
+rulerOfGreed:
+  id: titles.ruler.greed
+  name: Ruler of Greed
+  type: RULER
+  description: "A title granted to one who has conquered Greed."
+  effect: 'Each ability of Strength and HP rise.+Correction to Status strengthening skill Proficiencies. Grants ruling class privileges.'
+  condition: 'Acquisition of Greed'
+  acquisitionSkillIds: []
+
+rulerOfLust:
+  id: titles.ruler.lust
+  name: Ruler of Lust
+  type: RULER
+  description: "A title granted to one who has conquered Lust."
+  effect: 'Each ability of Speed and SP rise. +Correction to ruler-type skill proficiency. Grants ruling class privileges.'
+  condition: 'Acquisition of Lust.'
+  acquisitionSkillIds: []
+
+rulerOfEnvy:
+  id: titles.ruler.envy
+  name: Ruler of Envy
+  type: RULER
+  description: "A title granted to one who has conquered Envy."
+  effect: 'Each ability of Defence, Resistance and HP rise. +Correction to Enhancement skill proficiency. Grants ruling class privileges.'
+  condition: 'Acquisition of Envy'
+  acquisitionSkillIds: []
+
+rulerOfPreserverance:
+  id: titles.ruler.preserverance
+  name: Ruler of Pride
+  type: RULER
+  description: "A title granted to one who has conquered Preserverance."
+  effect: 'Increases defense and resistance stats. Lifts ban on Evil Eye-type skills. +Correction to resistance skill proficiencies. Grants ruling class privileges.'
+  condition: 'Acquisition of Preserverance.'
+  acquisitionSkillIds: []
+
+rulerOfCharity:
+  id: titles.ruler.charity
+  name: Ruler of Charity
+  type: RULER
+  description: "A title granted to one who has conquered Charity."
+  effect: 'Every ability of MP, magic and resistance rise. ＋Correction whenever ruler-type skill proficiency gained. Grants ruling class privileges.'
+  condition: 'Acquisition of Charity.'
+  acquisitionSkillIds: []
+
+rulerOfMercy:
+  id: titles.ruler.mercy
+  name: Ruler of Mercy
+  type: RULER
+  description: "A title granted to one who has conquered Mercy."
+  effect: 'Each ability of MP and HP rise. +Correction to Healing skill proficiency. Grants ruling class privileges.'
+  condition: 'Acquisition of Mercy.'
+  acquisitionSkillIds: []
+
+rulerOfTemperance:
+  id: titles.ruler.temperance
+  name: Ruler of Temperance
+  type: RULER
+  description: "A title granted to one who has conquered Temperance."
+  effect: 'Each ability of defence, Resistance and MP rise. +Correction to mental skill proficiency. Grants ruling class privileges.'
+  condition: 'Acquisition of Temperance.'
+  acquisitionSkillIds: []
+
+rulerOfDiligence:
+  id: titles.ruler.diligence
+  name: Ruler of Diligence
+  type: RULER
+  description: "A title granted to one who has conquered Diligence."
+  effect: 'Each ability of defence, Resistance and HP rise. +Correction to Perception skill proficiency. Grants ruling class privileges.'
+  condition: 'Acquisition of Diligence.'
+  acquisitionSkillIds: [] 
+
+rulerOfHumility:
+  id: titles.ruler.humility
+  name: Ruler of Humility
+  type: RULER
+  description: "A title granted to one who has conquered Humility."
+  effect: 'Each ability of Speed and Resistance rise. +Correction to stealth skill proficiency. Grants ruling class privileges.'
+  condition: 'Acquisition of Humility.'
+  acquisitionSkillIds: []
+
+rulerOfChastity:
+  id: titles.ruler.chastity
+  name: Ruler of Chastity
+  type: RULER
+  description: "A title granted to one who has conquered Chastity."
+  effect: 'Each ability of Defence, Resistance and Speed rise. +Correction to Sensory Skill proficiency. Grants ruling class privileges.'
+  condition: 'Acquisition of Chastity.'
+  acquisitionSkillIds: []
+
+rulerOfWisdom:
+  id: titles.ruler.wisdom
+  name: Ruler of Wisdom
+  type: RULER
+  description: "A title granted to one who has conquered Wisdom."
+  effect: 'Increases MP, magic, and resistance stats. +Correction to magic skill proficiencies. Grants ruling class privileges.'
+  condition: 'Acquisition of Wisdom.'
+  acquisitionSkillIds: []
